@@ -1,0 +1,45 @@
+{
+  "name": "siteassist-core",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://siteassist.io",
+  "author": "Rohid <rohid@siteassist.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siteassist/siteassist.git",
+    "directory": "packages/core"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "chatbot",
+    "gpt",
+    "siteassist",
+    "ai"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "git clean -xdf dist node_modules",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@types/node": "^22.13.14",
+    "eslint": "^9.23.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.0.0",
+    "terser": "^5.39.0",
+    "tsup": "^8.4.0",
+    "typescript": "5.8.2",
+    "typescript-eslint": "^8.28.0"
+  }
+}
