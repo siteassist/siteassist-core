@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "license": "MIT",
   "homepage": "https://siteassist.io",
-  "author": "Rohid <rohid@siteassist.io>",
+  "author": "SiteAssist <contact@siteassist.io>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siteassist/siteassist.git",
-    "directory": "packages/core"
+    "url": "git+https://github.com/siteassist/siteassist-core"
   },
   "sideEffects": false,
   "publishConfig": {
