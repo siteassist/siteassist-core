@@ -29,7 +29,7 @@ export interface Thread {
 }
 
 export interface LinkSource {
-  type: "link";
+  type: 'link';
   url: string;
   title?: string | null;
 }
@@ -37,9 +37,9 @@ export interface LinkSource {
 export type Source = LinkSource;
 
 export type Annotations = (
-  | { type: "status"; message: string }
-  | { type: "assistant"; assistantId: string }
-  | { type: "sources"; sources: Source[] }
+  | {type: 'status'; message: string}
+  | {type: 'assistant'; assistantId: string}
+  | {type: 'sources'; sources: Source[]}
 )[];
 
 export interface Message {
@@ -47,9 +47,9 @@ export interface Message {
   createdAt: Date;
   threadId: string;
   content: string;
-  role: "assistant" | "user";
-  userReaction?: "like" | "dislike" | null;
-  status?: "streaming" | "complete" | "error" | null;
+  role: 'assistant' | 'user';
+  userReaction?: 'like' | 'dislike' | null;
+  status?: 'streaming' | 'complete' | 'error' | null;
   error?: string | null;
   assistantId?: string | null;
   annotations?: Annotations | null;

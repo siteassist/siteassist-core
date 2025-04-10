@@ -28,14 +28,20 @@
     "clean": "git clean -xdf dist node_modules",
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "typescript": "tsc --noEmit",
+    "format": "prettier src",
+    "format:fix": "prettier src --write"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
     "@types/node": "^22.13.14",
     "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "globals": "^16.0.0",
+    "prettier": "^3.5.3",
     "terser": "^5.39.0",
     "tsup": "^8.4.0",
     "typescript": "5.8.2",

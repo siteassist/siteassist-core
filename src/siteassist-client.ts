@@ -1,4 +1,4 @@
-import type { Assistant, Message, Project, Thread } from "./types";
+import type {Assistant, Message, Project, Thread} from './types';
 
 export interface SiteAssistClientConfig {
   apiKey: string;
@@ -11,9 +11,9 @@ export class SiteAssistClient {
   public apiUri: string;
   public assistantId: string | undefined;
 
-  constructor({ apiKey, apiUri, assistantId }: SiteAssistClientConfig) {
+  constructor({apiKey, apiUri, assistantId}: SiteAssistClientConfig) {
     this.apiKey = apiKey;
-    this.apiUri = apiUri ?? "https://app.siteassist.io/api";
+    this.apiUri = apiUri ?? 'https://app.siteassist.io/api';
     this.assistantId = assistantId;
   }
 
@@ -22,7 +22,7 @@ export class SiteAssistClient {
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
       },
-      credentials: "include",
+      credentials: 'include',
     });
     if (!res.ok) {
       throw new Error(await res.text());
@@ -39,8 +39,8 @@ export class SiteAssistClient {
         headers: {
           Authorization: `Bearer ${this.apiKey}`,
         },
-        credentials: "include",
-      }
+        credentials: 'include',
+      },
     );
     if (!res.ok) {
       throw new Error(await res.text());
@@ -50,11 +50,11 @@ export class SiteAssistClient {
 
   async createThread(): Promise<Thread> {
     const res = await fetch(`${this.apiUri}/v1/threads`, {
-      method: "POST",
+      method: 'POST',
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
       },
-      credentials: "include",
+      credentials: 'include',
     });
     if (!res.ok) {
       const error = await res.text();
@@ -68,7 +68,7 @@ export class SiteAssistClient {
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
       },
-      credentials: "include",
+      credentials: 'include',
     });
     if (!res.ok) {
       const error = await res.text();
@@ -82,7 +82,7 @@ export class SiteAssistClient {
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
       },
-      credentials: "include",
+      credentials: 'include',
     });
     if (!res.ok) {
       const error = await res.text();
@@ -96,7 +96,7 @@ export class SiteAssistClient {
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
       },
-      credentials: "include",
+      credentials: 'include',
     });
     if (!res.ok) {
       const error = await res.text();
